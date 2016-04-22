@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Videos</string>
-    <string name="action_settings">Settings</string>
+    <string name="mais_populares">Ordenar por mais populares</string>
     <string name="ordenar_por_data_lancamento">Ordenar por data de lançamento</string>
-    <string name="ordenar_por_favorito">Ordenar por Favorito</string>
+    <string name="ordenar_por_melhor_avaliado">Ordenar por melhor avaliado</string>
 </resources>

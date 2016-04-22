@@ -9,8 +9,5 @@
     android:horizontalSpacing="5dp"
     android:stretchMode="columnWidth"
     android:gravity="center"
-
-
-
     />
 
