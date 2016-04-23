@@ -1,5 +1,6 @@
 package com.example.eltonmelo.videos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -17,6 +18,7 @@ import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.rest.RestService;
 
 import Adapter.ImageAdapter;
+import Helper.Constants;
 import Model.Movie;
 import Model.TOMovieLIst;
 import WS.RestClient;
@@ -60,8 +62,17 @@ public class HomeActivity extends AppCompatActivity {
     @ItemClick
     public void gridview1(int item) {
         Movie movie = (Movie) imageAdapter.getItem(item);
-        Toast.makeText(HomeActivity.this, movie.getOriginalTitle(),
-                Toast.LENGTH_SHORT).show();
+//        Toast.makeText(HomeActivity.this, movie.getOriginalTitle(),
+//                Toast.LENGTH_SHORT).show();
+        openMovieSelected(movie);
+    }
+
+    public  void openMovieSelected(Movie movie) {
+        Intent intent = new Intent(this, DetailMovieActivity_.class);
+        Bundle b = new Bundle();
+        b.putLong(Constants.EXTRA_VIDEO, movie.getId());
+        intent.putExtras(b);
+        startActivity(intent);
     }
 
     @Background
