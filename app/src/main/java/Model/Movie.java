@@ -32,7 +32,7 @@ public class Movie {
 
     @SerializedName("id")
     @Expose
-    private int id;
+    private int idMovie;
 
     @SerializedName("original_title")
     @Expose
@@ -106,12 +106,12 @@ public class Movie {
         this.genreIds = genreIds;
     }
 
-    public int getId() {
-        return id;
+    public int getIdMovie() {
+        return idMovie;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdMovie(int idMovie) {
+        this.idMovie = idMovie;
     }
 
     public String getOriginalTitle() {

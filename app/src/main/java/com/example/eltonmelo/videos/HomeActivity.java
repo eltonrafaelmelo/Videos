@@ -70,7 +70,7 @@ public class HomeActivity extends AppCompatActivity {
     public  void openMovieSelected(Movie movie) {
         Intent intent = new Intent(this, DetailMovieActivity_.class);
         Bundle b = new Bundle();
-        b.putLong(Constants.EXTRA_VIDEO, movie.getId());
+        b.putLong(Constants.EXTRA_VIDEO, movie.getIdMovie());
         intent.putExtras(b);
         startActivity(intent);
     }
