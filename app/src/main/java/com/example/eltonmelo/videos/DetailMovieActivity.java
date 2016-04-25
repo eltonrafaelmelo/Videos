@@ -18,6 +18,8 @@ import org.androidannotations.annotations.rest.RestService;
 import Adapter.ImageAdapter;
 import Helper.Constants;
 import Model.DetailMovieModel;
+import Model.GenreModel;
+import Model.SpokenLanguage;
 import Model.TOMovieLIst;
 import WS.RestClient;
 
@@ -71,11 +73,31 @@ public class DetailMovieActivity extends AppCompatActivity {
     @UiThread
     void updateView(DetailMovieModel detailMovieModel) {
         released.setText(detailMovieModel.getStatus());
-        data.setText(detailMovieModel.getReleaseDate());
-//        minutos.setText(detailMovieModel.getRuntime());
+//        data.setText(detailMovieModel.getReleaseDate());
+        minutos.setText(String.valueOf(detailMovieModel.getRuntime()) + " Minutos" );
         descricao.setText(detailMovieModel.getOverview());
-//        released.setText(detailMovieModel.getReleaseDate());
-//        released.setText(detailMovieModel.getReleaseDate());
+
+        String genero = "";
+        for (GenreModel genreModel : detailMovieModel.getGenres()) {
+            genero = genero + "" + genreModel.getName() + " |";
+        }
+
+        this.genero.setText(genero);
+
+        String idioma = "";
+        for (SpokenLanguage spokenLanguage : detailMovieModel.getSpokenLanguages()) {
+            idioma = idioma + "" + spokenLanguage.getName() + " |";
+        }
+
+        this.idioma.setText(idioma);
+
+        String[] separated = detailMovieModel.getReleaseDate().split("-");
+        String dia = separated[2];
+        String mes = separated[1];
+        String ano = separated[0];
+        data.setText(dia + "/" + mes + "/" + ano);
+
+
         String url = "http://image.tmdb.org/t/p/w500" + detailMovieModel.getPosterPath();
         // Trigger the download of the URL asynchronously into the image view.
         Picasso.with(this) //
