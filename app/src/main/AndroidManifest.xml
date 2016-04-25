@@ -20,6 +20,7 @@
         </activity>
 
         <activity android:name=".DetailMovieActivity_"/>
+        <activity android:name=".TrailersActivity_"/>
     </application>
 
 

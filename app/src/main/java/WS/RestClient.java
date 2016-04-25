@@ -7,6 +7,7 @@ import org.springframework.http.converter.json.GsonHttpMessageConverter;
 
 import Model.DetailMovieModel;
 import Model.TOMovieLIst;
+import Model.TOTrailerModel;
 
 /**
  * Created by eltonmelo on 4/21/16.
@@ -25,4 +26,8 @@ public interface RestClient extends RestClientErrorHandling {
 
     @Get("/movie/{idMovie}?api_key=a573db5e752a82b043ab78deb9ab2a2b")
     DetailMovieModel getDetailMovie(int idMovie);
+
+    //http://api.themoviedb.org/3/movie/\(codMovie)/videos?api_key=a573db5e752a82b043ab78deb9ab2a2b
+    @Get("/movie/{codMovie}/videos?api_key=a573db5e752a82b043ab78deb9ab2a2b")
+    TOTrailerModel getTrailer(int codMovie);
 }

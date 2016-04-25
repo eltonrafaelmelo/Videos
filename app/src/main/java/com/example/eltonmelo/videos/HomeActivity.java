@@ -62,8 +62,6 @@ public class HomeActivity extends AppCompatActivity {
     @ItemClick
     public void gridview1(int item) {
         Movie movie = (Movie) imageAdapter.getItem(item);
-//        Toast.makeText(HomeActivity.this, movie.getOriginalTitle(),
-//                Toast.LENGTH_SHORT).show();
         openMovieSelected(movie);
     }
 

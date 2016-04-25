@@ -1,15 +1,18 @@
 package com.example.eltonmelo.videos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
@@ -21,6 +24,7 @@ import Model.DetailMovieModel;
 import Model.GenreModel;
 import Model.SpokenLanguage;
 import Model.TOMovieLIst;
+import Model.TOTrailerModel;
 import WS.RestClient;
 
 /**
@@ -54,12 +58,13 @@ public class DetailMovieActivity extends AppCompatActivity {
     @ViewById
     ImageView imageView2;
 
+    int idMovie;
+
     @AfterViews
     void AfterViews() {
 //        setSupportActionBar(toolbar);
         Bundle b = getIntent().getExtras();
         long value = b.getLong(Constants.EXTRA_VIDEO);
-        int idMovie;
         idMovie = (int) value;
         getDetailMovie(idMovie);
     }
@@ -109,6 +114,35 @@ public class DetailMovieActivity extends AppCompatActivity {
                 .into(imageView2);
 
     }
+
+    @Click(R.id.buttonTrailes)
+    void touchButtonTrailes() {
+        getTrailes();
+    }
+
+    @Background
+    void  getTrailes() {
+        TOTrailerModel toTrailerModel = restClient.getTrailer(idMovie);
+        callScreenTrailers(toTrailerModel);
+    }
+
+    @UiThread
+    void callScreenTrailers(TOTrailerModel toTrailerModel) {
+
+        if (toTrailerModel.getResults().size() > 0) {
+//            Toast.makeText(this, "Existem Trailers",
+//                    Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, TrailersActivity_.class);
+            Bundle b = new Bundle();
+            b.putLong(Constants.EXTRA_TRAILERS, idMovie);
+            intent.putExtras(b);
+            startActivity(intent);
+        } else  {
+            Toast.makeText(this, "O Trailer ainda não estar disponível",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
 
 
