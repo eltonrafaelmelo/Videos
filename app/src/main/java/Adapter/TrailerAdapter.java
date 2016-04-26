@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.eltonmelo.videos.R;
 
 import Model.TOTrailerModel;
+import Model.TrailerModel;
 
 /**
  * Created by eltonmelo on 4/25/16.
@@ -42,11 +43,14 @@ public class TrailerAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
+        TrailerModel trailerModel = toTrailerModel.getResults().get(position);
+
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.row_list_trailer, null);
 
         TextView textnome = (TextView) view.findViewById(R.id.textview_name);
-        textnome.setText("Trailer - " + String.valueOf(position));
+//        textnome.setText("Trailer - " + String.valueOf(position));
+        textnome.setText(trailerModel.getName());
 
         return view;
     }

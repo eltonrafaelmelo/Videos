@@ -20,9 +20,13 @@
         </activity>
 
         <activity android:name=".DetailMovieActivity_"/>
-        <activity android:name=".TrailersActivity_"/>
-    </application>
 
+        <activity
+            android:name=".TrailersActivity_"
+            android:label="@string/screen_trailer"/>
+
+        <activity android:name=".WebViewActivity_"/>
+    </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
