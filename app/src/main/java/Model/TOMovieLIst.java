@@ -57,4 +57,8 @@ public class TOMovieLIst {
     public void setTotalPages(int totalPages) {
         this.totalPages = totalPages;
     }
+
+    public void clearList() {
+        results.clear();
+    }
 }

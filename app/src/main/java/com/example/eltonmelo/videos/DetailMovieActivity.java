@@ -1,13 +1,18 @@
 package com.example.eltonmelo.videos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.squareup.picasso.Picasso;
 
 import org.androidannotations.annotations.AfterViews;
@@ -18,12 +23,16 @@ import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.rest.RestService;
 
+import java.util.List;
+
 import Adapter.ImageAdapter;
+import DAO.DatabaseManager;
 import Helper.Constants;
 import Model.DetailMovieModel;
 import Model.GenreModel;
 import Model.SpokenLanguage;
 import Model.TOMovieLIst;
+import Model.TOPhoto;
 import Model.TOTrailerModel;
 import WS.RestClient;
 
@@ -58,7 +67,12 @@ public class DetailMovieActivity extends AppCompatActivity {
     @ViewById
     ImageView imageView2;
 
+    @ViewById
+    ImageButton buttonAddFavorites;
+
     int idMovie;
+
+    DetailMovieModel detailMovie;
 
     @AfterViews
     void AfterViews() {
@@ -70,8 +84,8 @@ public class DetailMovieActivity extends AppCompatActivity {
     }
 
     @Background
-    void  getDetailMovie(int id) {
-        DetailMovieModel detailMovie = restClient.getDetailMovie(id);
+    void getDetailMovie(int id) {
+        detailMovie = restClient.getDetailMovie(id);
         updateView(detailMovie);
     }
 
@@ -79,7 +93,7 @@ public class DetailMovieActivity extends AppCompatActivity {
     void updateView(DetailMovieModel detailMovieModel) {
         released.setText(detailMovieModel.getStatus());
 //        data.setText(detailMovieModel.getReleaseDate());
-        minutos.setText(String.valueOf(detailMovieModel.getRuntime()) + " Minutos" );
+        minutos.setText(String.valueOf(detailMovieModel.getRuntime()) + " Minutos");
         descricao.setText(detailMovieModel.getOverview());
 
         String genero = "";
@@ -120,10 +134,46 @@ public class DetailMovieActivity extends AppCompatActivity {
         getTrailes();
     }
 
+    @Click(R.id.buttonPhotos)
+    void touchButtonPhotos() {
+        getPhotos();
+    }
+
+    @Click (R.id.buttonAddFavorites)
+    public void touchButtoFavorite() {
+        buttonAddFavorites.setImageResource(R.drawable.favorite);
+    }
+
     @Background
-    void  getTrailes() {
+    void getTrailes() {
         TOTrailerModel toTrailerModel = restClient.getTrailer(idMovie);
         callScreenTrailers(toTrailerModel);
+    }
+
+    @Background
+    void getPhotos() {
+        TOPhoto toPhoto = restClient.getPhotos(idMovie);
+        callScreenPhotos(toPhoto);
+    }
+
+    @UiThread
+    void callScreenPhotos(TOPhoto toPhoto) {
+
+//        DatabaseManager databaseManager =  DatabaseManager.init(this);
+//
+//        List<DetailMovieModel> list = databaseManager.getInstance().findAllDetailMovie();
+
+        if (toPhoto.getPosters().size() > 0) {
+            Intent intent = new Intent(this, PhotoPageActivity_.class);
+            Bundle b = new Bundle();
+            b.putLong(Constants.EXTRA_PHOTO_ID_VIDEO, idMovie);
+            b.putString(Constants.EXTRA_PHOTO_TITLE_VIDEO, detailMovie.getTitle());
+            intent.putExtras(b);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Os Poster ainda não estão disponíveis",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 
     @UiThread
@@ -137,7 +187,7 @@ public class DetailMovieActivity extends AppCompatActivity {
             b.putLong(Constants.EXTRA_TRAILERS, idMovie);
             intent.putExtras(b);
             startActivity(intent);
-        } else  {
+        } else {
             Toast.makeText(this, "O Trailer ainda não estar disponível",
                     Toast.LENGTH_SHORT).show();
         }

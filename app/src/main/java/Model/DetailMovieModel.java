@@ -2,13 +2,18 @@ package Model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.ArrayList;
+
+import io.realm.RealmList;
+import io.realm.RealmObject;
 
 /**
  * Created by eltonmelo on 4/23/16.
  */
-public class DetailMovieModel {
+public class DetailMovieModel extends RealmObject {
 
     @SerializedName("adult")
     @Expose
@@ -28,7 +33,8 @@ public class DetailMovieModel {
 
     @SerializedName("genres")
     @Expose
-    private ArrayList<GenreModel> genres;
+    private RealmList<GenreModel> genres;
+//    private ArrayList<GenreModel> genres;
 
     @SerializedName("homepage")
     @Expose
@@ -64,11 +70,13 @@ public class DetailMovieModel {
 
     @SerializedName("production_companies")
     @Expose
-    private ArrayList<ProductionCompanie> productionCompanies;
+    private RealmList<ProductionCompanie> productionCompanies;
+//    private ArrayList<ProductionCompanie> productionCompanies;
 
     @SerializedName("production_countries")
     @Expose
-    private ArrayList<ProductionCountrie> productionCountries;
+    private RealmList<ProductionCountrie> productionCountries;
+//    private ArrayList<ProductionCountrie> productionCountries;
 
     @SerializedName("release_date")
     @Expose
@@ -84,7 +92,8 @@ public class DetailMovieModel {
 
     @SerializedName("spoken_languages")
     @Expose
-    private ArrayList<SpokenLanguage> spokenLanguages;
+    private RealmList<SpokenLanguage> spokenLanguages;
+//    private ArrayList<SpokenLanguage> spokenLanguages;
 
     @SerializedName("status")
     @Expose
@@ -140,14 +149,6 @@ public class DetailMovieModel {
 
     public void setBudget(int budget) {
         this.budget = budget;
-    }
-
-    public ArrayList<GenreModel> getGenres() {
-        return genres;
-    }
-
-    public void setGenres(ArrayList<GenreModel> genres) {
-        this.genres = genres;
     }
 
     public String getHomepage() {
@@ -214,22 +215,6 @@ public class DetailMovieModel {
         this.posterPath = posterPath;
     }
 
-    public ArrayList<ProductionCompanie> getProductionCompanies() {
-        return productionCompanies;
-    }
-
-    public void setProductionCompanies(ArrayList<ProductionCompanie> productionCompanies) {
-        this.productionCompanies = productionCompanies;
-    }
-
-    public ArrayList<ProductionCountrie> getProductionCountries() {
-        return productionCountries;
-    }
-
-    public void setProductionCountries(ArrayList<ProductionCountrie> productionCountries) {
-        this.productionCountries = productionCountries;
-    }
-
     public String getReleaseDate() {
         return releaseDate;
     }
@@ -252,14 +237,6 @@ public class DetailMovieModel {
 
     public void setRuntime(int runtime) {
         this.runtime = runtime;
-    }
-
-    public ArrayList<SpokenLanguage> getSpokenLanguages() {
-        return spokenLanguages;
-    }
-
-    public void setSpokenLanguages(ArrayList<SpokenLanguage> spokenLanguages) {
-        this.spokenLanguages = spokenLanguages;
     }
 
     public String getStatus() {
@@ -308,5 +285,37 @@ public class DetailMovieModel {
 
     public void setVoteCount(int voteCount) {
         this.voteCount = voteCount;
+    }
+
+    public RealmList<GenreModel> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(RealmList<GenreModel> genres) {
+        this.genres = genres;
+    }
+
+    public RealmList<ProductionCompanie> getProductionCompanies() {
+        return productionCompanies;
+    }
+
+    public void setProductionCompanies(RealmList<ProductionCompanie> productionCompanies) {
+        this.productionCompanies = productionCompanies;
+    }
+
+    public RealmList<ProductionCountrie> getProductionCountries() {
+        return productionCountries;
+    }
+
+    public void setProductionCountries(RealmList<ProductionCountrie> productionCountries) {
+        this.productionCountries = productionCountries;
+    }
+
+    public RealmList<SpokenLanguage> getSpokenLanguages() {
+        return spokenLanguages;
+    }
+
+    public void setSpokenLanguages(RealmList<SpokenLanguage> spokenLanguages) {
+        this.spokenLanguages = spokenLanguages;
     }
 }

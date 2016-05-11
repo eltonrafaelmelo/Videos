@@ -38,6 +38,10 @@ public class ImageAdapter extends BaseAdapter {
         return position;
     }
 
+    static class ViewHolder {
+        ImageView imagePost;
+    }
+
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -50,7 +54,7 @@ public class ImageAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
-        Movie movie =  results.get(position);
+        Movie movie = (Movie) getItem(position);
         String url = "http://image.tmdb.org/t/p/w500" + movie.getPosterPath();
         // Trigger the download of the URL asynchronously into the image view.
         Picasso.with(mContext) //

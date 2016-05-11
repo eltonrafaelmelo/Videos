@@ -59,6 +59,16 @@
                 android:text="Medium Text"
                 android:id="@+id/minutos"
                 android:layout_marginLeft="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonAddFavorites"
+                android:src="@drawable/add_favorite"
+                android:background="#ffffff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -121,6 +131,15 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Imagens"
+                android:id="@+id/buttonPhotos"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
 
         </LinearLayout>
     </ScrollView>

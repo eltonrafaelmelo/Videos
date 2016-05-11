@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Videos</string>
     <string name="screen_trailer">Trailers</string>
+    <string name="screen_protos">Posters</string>
 
     <string name="mais_populares">Ordenar por mais populares</string>
     <string name="ordenar_por_data_lancamento">Ordenar por data de lançamento</string>
     <string name="ordenar_por_melhor_avaliado">Ordenar por melhor avaliado</string>
+    <string name="pagina_slide">Pagina </string>
 </resources>

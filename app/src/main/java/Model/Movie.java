@@ -3,12 +3,16 @@ package Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by eltonmelo on 4/21/16.
  */
-public class Movie {
+public class Movie implements  Comparable<Movie>{
 
     @SerializedName("poster_path")
     @Expose
@@ -65,6 +69,22 @@ public class Movie {
     @SerializedName("vote_average")
     @Expose
     private double voteAverage;
+
+//    Date dataLancamento;
+
+    public Date getDataLancamento() throws ParseException {
+//
+//        String[] separated = getRelease_date().split("-");
+//        String dia = separated[2];
+//        String mes = separated[1];
+//        String ano = separated[0];
+//        String data = dia + "/" + mes + "/" + ano;
+//
+//        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date strDate = sdf.parse(getRelease_date());
+        return strDate;
+    }
 
     public String getPosterPath() {
         return posterPath;
@@ -177,4 +197,20 @@ public class Movie {
     public void setVoteAverage(double voteAverage) {
         this.voteAverage = voteAverage;
     }
+
+    @Override
+    public int compareTo(Movie o) {
+        if (this.voteCount < o.voteCount) {
+            return -1;
+        }
+        if (this.voteCount > o.voteCount) {
+            return 1;
+        }
+        return 0;
+    }
+
+    public int compareToDate(Movie o) throws ParseException {
+        return getDataLancamento().compareTo(o.getDataLancamento());
+    }
+
 }

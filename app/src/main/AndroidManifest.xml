@@ -24,8 +24,15 @@
         <activity
             android:name=".TrailersActivity_"
             android:label="@string/screen_trailer"/>
+        <activity
+            android:name=".PhotoPageActivity_"
+            android:label="@string/screen_protos"
+            />
 
         <activity android:name=".WebViewActivity_"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

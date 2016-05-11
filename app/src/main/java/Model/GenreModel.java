@@ -2,11 +2,16 @@ package Model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+import io.realm.RealmObject;
 
 /**
  * Created by eltonmelo on 4/23/16.
  */
-public class GenreModel {
+
+public class GenreModel extends RealmObject {
 
     @SerializedName("id")
     @Expose

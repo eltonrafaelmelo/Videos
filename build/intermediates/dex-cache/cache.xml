@@ -1,2 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_965d858c1ef5b8f2de21abf7101a69cfb76a9eca.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.1_02ddc11a9bc5230909bcd02243eb904f6e6138f7.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.2/89b33bb1e996eb2c4089f79d1b8651c71fe8e2d1/androidannotations-api-3.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="89b33bb1e996eb2c4089f79d1b8651c71fe8e2d1">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/androidannotations-api-3.2_048f7573d5d6b1add580cb169fe48eb741ba86cd.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.1_57be3fe7aef610c3ace03eaf3244bab8b6f13625.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/4.48/e579bd2905d0399af5029aaaf9817d5fa0ca88a5/ormlite-core-4.48.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/ormlite-core-4.48_36fac1bf024df34ec41f10907123ce2c903857b8.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/io.realm/realm-android-library/0.90.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="edadd4550909a17936b2540be7489ba2944d83cf">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/io.realm-realm-android-library-0.90.0_85b09c494878804c0064fcc17aa6e60cc920c560.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="264f0bc4c0680cfe7a60fea1f12a43f1ab48e7c8">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.getkeepsafe.relinker-relinker-1.2.1_091511053035fc0cb7a00ef166e7bef4fdd0d9dd.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="28c1250cfa988d8eab5dfad3cd0ca1eb119a9395">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_26cb997c743985930a4d61bbd8b0797d2b0941bf.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.1_79a2789fbb45a3b8d2c601c2afa269460a54f578.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-android/4.48/afa06f539a4026c10b247386312aa67404b80a16/ormlite-android-4.48.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/ormlite-android-4.48_54b503fe1b9c16c87a2bd3f7c4e7a0abe92effc4.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="29f58a60d27f71b4b0a8ff377dc02df60f98ff00">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/instant-run_733f3939632216c5c7ae9942689140bce75a9c8f.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_4e8735be9ac5119c1510a26195bd1f527d9acd8d.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.1_f1d7d5ff1821bfe4c6955a25afe4549482f583b1.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.1_04d4394aaa71d4137f441725253cf653098ac9c7.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/1.7.2/112366d8158749e25532ebce162232c6e0fb20a5/gson-1.7.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="112366d8158749e25532ebce162232c6e0fb20a5">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/gson-1.7.2_19d29b84db87700701c5ab89468bd9a8e35dd25d.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-core/1.0.0.M4/17be4c2e91ac2820b0cd8c4a6f0cd123fdc176dd/spring-android-core-1.0.0.M4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="17be4c2e91ac2820b0cd8c4a6f0cd123fdc176dd">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/spring-android-core-1.0.0.M4_4542190489c273191893be75f39625bea539d5ea.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.1.0_f7b69d1647755d127b63358443001e03188cca79.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_10c7607e9026f385408e95b64d404d5b220957f3.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-rest-template/1.0.0.M4/a88ba5252054023544e797c02762bbe3fa26ac77/spring-android-rest-template-1.0.0.M4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a88ba5252054023544e797c02762bbe3fa26ac77">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/spring-android-rest-template-1.0.0.M4_3e4510f0a3ca43c40f1be479a8bd5c28e5bb8071.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_dd5a440dedf948e8745ee26cee10ef12a2279a8e.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/.gradle/caches/modules-2/files-2.1/io.realm/realm-annotations/0.90.0/6534c30a6ff9b2762df92ebb549f809832066177/realm-annotations-0.90.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6534c30a6ff9b2762df92ebb549f809832066177">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/realm-annotations-0.90.0_6022b006e6dd3bb3f4aa7263ae3b0d02bbe04309.jar" />
+    </item>
+    <item
+        jar="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/eltonmelo/Projetos/Android/Videos/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.1.0_d278e9c7f9958c130bc211f213272f1ad5328ddb.jar" />
+    </item>
+
+</items>
