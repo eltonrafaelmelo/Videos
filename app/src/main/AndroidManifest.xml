@@ -28,6 +28,11 @@
             android:name=".PhotoPageActivity_"
             android:label="@string/screen_protos"
             />
+        <activity android:name=".ListFavoriteMovieActivity_"
+            android:label="@string/screen_favorites"/>
+
+        <activity android:name=".DetailFavoriteMovieActivity_"
+            android:label="@string/screen_favorites"/>
 
         <activity android:name=".WebViewActivity_"/>
         <meta-data

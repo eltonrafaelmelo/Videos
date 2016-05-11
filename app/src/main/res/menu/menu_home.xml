@@ -20,10 +20,17 @@
         android:title="@string/ordenar_por_melhor_avaliado"
         app:showAsAction="never" />
 
+    <item android:id="@+id/action_favorite"
+        android:icon="@drawable/favorite"
+        android:title=""
+        app:showAsAction="always"
+        />
+
     <item android:id="@+id/action_update"
         android:icon="@drawable/update"
         android:title=""
         app:showAsAction="always"
-
         />
+
+
 </menu>

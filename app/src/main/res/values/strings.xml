@@ -2,6 +2,7 @@
     <string name="app_name">Videos</string>
     <string name="screen_trailer">Trailers</string>
     <string name="screen_protos">Posters</string>
+    <string name="screen_favorites">Favoritos</string>
 
     <string name="mais_populares">Ordenar por mais populares</string>
     <string name="ordenar_por_data_lancamento">Ordenar por data de lançamento</string>

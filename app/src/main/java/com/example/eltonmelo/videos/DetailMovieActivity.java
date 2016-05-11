@@ -30,11 +30,15 @@ import DAO.DatabaseManager;
 import Helper.Constants;
 import Model.DetailMovieModel;
 import Model.GenreModel;
+import Model.ModelTeste;
 import Model.SpokenLanguage;
 import Model.TOMovieLIst;
 import Model.TOPhoto;
 import Model.TOTrailerModel;
 import WS.RestClient;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.RealmResults;
 
 /**
  * Created by eltonmelo on 4/23/16.
@@ -142,6 +146,22 @@ public class DetailMovieActivity extends AppCompatActivity {
     @Click (R.id.buttonAddFavorites)
     public void touchButtoFavorite() {
         buttonAddFavorites.setImageResource(R.drawable.favorite);
+        addMovieInFavorite();
+    }
+
+    public void addMovieInFavorite() {
+        RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
+        Realm realm = Realm.getInstance(realmConfig);
+        RealmResults<DetailMovieModel> tasks = realm.where(DetailMovieModel.class).equalTo("title", detailMovie.getTitle()).findAll();
+
+        if (tasks.size() > 0 ) {
+            Toast.makeText(this, "O filme já foi adicionado ao favoritos.",
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            realm.beginTransaction();
+            realm.copyToRealm(detailMovie);
+            realm.commitTransaction();
+        }
     }
 
     @Background
@@ -158,10 +178,6 @@ public class DetailMovieActivity extends AppCompatActivity {
 
     @UiThread
     void callScreenPhotos(TOPhoto toPhoto) {
-
-//        DatabaseManager databaseManager =  DatabaseManager.init(this);
-//
-//        List<DetailMovieModel> list = databaseManager.getInstance().findAllDetailMovie();
 
         if (toPhoto.getPosters().size() > 0) {
             Intent intent = new Intent(this, PhotoPageActivity_.class);
@@ -180,8 +196,6 @@ public class DetailMovieActivity extends AppCompatActivity {
     void callScreenTrailers(TOTrailerModel toTrailerModel) {
 
         if (toTrailerModel.getResults().size() > 0) {
-//            Toast.makeText(this, "Existem Trailers",
-//                    Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, TrailersActivity_.class);
             Bundle b = new Bundle();
             b.putLong(Constants.EXTRA_TRAILERS, idMovie);

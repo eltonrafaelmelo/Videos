@@ -94,6 +94,12 @@ public class HomeActivity extends AppCompatActivity implements EndlessScrollList
         sortListMovie();
     }
 
+    @OptionsItem(R.id.action_favorite)
+    void touchButtonFavorite() {
+        Intent intent = new Intent(this, ListFavoriteMovieActivity_.class);
+        startActivity(intent);
+    }
+
     @ItemClick
     public void gridview1(int item) {
         Movie movie = (Movie) imageAdapter.getItem(item);
